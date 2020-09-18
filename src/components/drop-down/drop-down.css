@@ -1,0 +1,48 @@
+.drop-down {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.show {
+    height: 195px;
+    transition: height 0.3s ease-in;
+    border-bottom: 1px solid;
+    border-color: #E8E8E8;
+}
+
+.hide {
+    height: 0;
+    transition: height 0.3s ease-in;
+    border-bottom: 1px solid;
+    border-color: #E8E8E8;
+}
+
+.button {
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.button:hover {
+    cursor: pointer;
+    color: #1990c6;
+}
+
+.button:focus {
+    color: #1990c6;
+}
+
+
+.large-font {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #707070;
+    font-weight: 600;
+}
+
+.margin-right-large {
+    margin-right: 40px;
+}
