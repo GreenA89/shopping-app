@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600 bold;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    height: 285px;
+    width: 100vw;
+    background-repeat: no-repeat;
+}

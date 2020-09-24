@@ -1,0 +1,19 @@
+.grey-out {
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    border: 1px solid;
+}
+
+.show-grey {
+    /* display: block; */
+    background-color: rgba(0,0,0,0.7);
+    transition: background-color 0.2s ease-in;
+}
+
+.hide-grey {
+    display: none;
+    background-color: none;
+    transition: background-color 0.2s ease-in;
+}

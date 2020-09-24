@@ -1,0 +1,36 @@
+.sort {
+    padding-left: 15px;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.select-font {
+    font: 400 Arial;
+}
+
+.select {
+    background: none;
+    border: 1px solid;
+    border-color: #9a9a9a;
+    width: 240px;
+    height: 38px;
+    padding-left: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+    letter-spacing: 1px;
+    color: #4e4e4e;
+    transition: color 0.2s ease-in;
+    outline: none;
+}
+
+.select:hover {
+    cursor: pointer;
+    color: black;
+    transition: color 0.2s ease-in;
+}
+
+.margin-left {
+    margin-left: 5px;
+}

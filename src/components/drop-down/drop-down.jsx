@@ -8,13 +8,13 @@ const DropDown = (props) => {
     console.log(index)
 
     return (
-        <div 
-            className={`drop-down${props.toggleDropDown ? ' show' : ' hide'}`}
-        >
-            {props.toggleDropDown ? DropDownLinks[index].map(link =>
-                <button className='button large-font margin-right-large'>{link}</button>
-            ) : null}
-        </div>
+            <div 
+                className={`drop-down${props.toggleDropDown ? ' show' : ' hide'}`}
+            >
+                {props.toggleDropDown ? DropDownLinks[index].map((link, key) =>
+                    <button className='button large-font margin-right-large' key={key}>{link}</button>
+                ) : null}
+            </div>
     )
 }
 
