@@ -10,11 +10,11 @@ const Footer = () => {
         <div className='footer'>
             <div className='column border-right'>
                 <div className='column'>
-                    <p>NEWSLETTER SIGN UP</p>
-                    <span><input type='email' placeholder='Enter your email'></input><button>SIGN UP</button></span>
+                    <span className='font-dark'><p>NEWSLETTER SIGN UP</p></span>
+                    <span className='wide'><input type='email' placeholder='Enter your email' className='input' ></input><button className='sign-up'>SIGN UP</button></span>
                     <span className='span'><input type="checkbox"></input><p>Receive news about Poketo Los Angeles?</p></span>
                 </div>
-                <div className='column'>
+                <div className='column font-dark'>
                     <p>SOCIAL LINKS</p>
                     <span>
                         <button className='social'><img src={Twitter}></img></button>
@@ -22,7 +22,10 @@ const Footer = () => {
                         <button className='social'><img src={Pinterest}></img></button>
                         <button className='social'><img src={Instagram}></img></button>
                     </span>
-                    <p>Don't forget to follow us!</p>
+                    <p className='font-light'>Don't forget to follow us!</p>
+                </div>
+                <div className='copyright column'>
+                    <p>Copyright © 2020 <span>Poketo</span></p>
                 </div>
             </div>
             <div className='column'>
