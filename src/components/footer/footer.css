@@ -15,11 +15,28 @@
     font-size: 13px;
 }
 
+.margin-top {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.padding-bottom {
+    padding-bottom: 20px;
+}
+
 .font-light {
     font-family: Montserrat,sans-serif;
     font-weight: bold;
     line-height: 1.55;
     color: white;
+    font-size: 11px;
+}
+
+.font-lighter {
+    font-family: Montserrat,sans-serif;
+    font-weight: bold;
+    line-height: 1.55;
+    color: rgba(244,244,244, 0.8);
     font-size: 11px;
 }
 
@@ -34,15 +51,16 @@
     font-size: 11px;
     opacity: 0.9;
     font-family: Montserrat,sans-serif;
-    letter-spacing: 1px;
+    letter-spacing: 0;
 }
 
 .span {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;;
     width: 330px;
+    font-size: 15px;
     color: rgb(238, 238, 238);
 }
 
@@ -50,26 +68,45 @@
     display: flex;
     flex-direction: row;
     width: 575px;
-    align-items: flex-end
+    align-items: flex-end;
+    margin-top: 23px;
 }
 
 .sign-up {
     height: 35px;
+    background: rgb(132, 136, 143);
+    width: 70px;
+    outline: none;
+    border: none;
+}
+
+.sign-up:hover {
+    cursor: pointer;
 }
 
 .input {
-    width: 495px;
-    height: 45px;
+    width: 475px;
+    height: 43px;
     border-radius: 3px;
-    background: #444444;
+    background: rgba(68,68,68, 0.8);
     border: 1px solid;
-    border-color: white;
+    border-color: rgba(244,244,244, 0.7);
     padding-left: 25px;
-    font-size: 15px;
+    font-size: 12px;
+    transition: border-color 0.2s ease-in;
+    color: rgba(244,244,244, 0.7);
+    outline: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.input::placeholder {
+    font-size: 14px;
+    color: rgba(244,244,244, 0.5);
 }
 
 .input:hover {
-    border: black;
+    border-color: black;
+    transition: border-color 0.2s ease-in;
 }
 
 .column { 
@@ -83,20 +120,30 @@
 }
 
 .border-right {
-    border: 1px solid;
+    border-right: 1px solid;
     border-color: #636363;
 }
 
 .social {
     height: 40px;
     width: 40px;
-    color: white;
     background: none;
+    fill: none;
     outline: none;
     border: none;
+    margin-right: 5px;
 }
 
 .social:hover {
     cursor: pointer;
 }
 
+input[type=checkbox] {
+    height: 21px;
+    width: 21px;
+    margin-right: 4px;
+}
+
+.underline {
+    text-decoration: underline dotted;
+}
