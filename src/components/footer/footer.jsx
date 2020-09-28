@@ -17,10 +17,10 @@ const Footer = () => {
                 <div className='column font-dark'>
                     <p>SOCIAL LINKS</p>
                     <span>
-                        <button className='social'><img src={Twitter}></img></button>
-                        <button className='social'><img src={Facebook}></img></button>
-                        <button className='social'><img src={Pinterest}></img></button>
-                        <button className='social'><img src={Instagram}></img></button>
+                        <button className='social'><img src={Twitter} alt=''></img></button>
+                        <button className='social'><img src={Facebook} alt=''></img></button>
+                        <button className='social'><img src={Pinterest} alt=''></img></button>
+                        <button className='social'><img src={Instagram} alt=''></img></button>
                     </span>
                     <p className='font-light'>Don't forget to follow us!</p>
                 </div>
