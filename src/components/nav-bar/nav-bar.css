@@ -17,6 +17,7 @@
     align-items: center;
     padding-right: 20px;
     padding-left: 50px;
+    align-content: center;
 }
 
 .margin-right {
@@ -35,14 +36,17 @@
     outline: none;
     border: none;
     background: none;
+    transition: color 0.2s ease-in;
 }
 
 .button:hover {
     cursor: pointer;
     color: #1990c6;
+    transition: color 0.2s ease-in;
 }
 
 .button:focus {
     color: #1990c6;
 }
+
 
