@@ -11,7 +11,7 @@
     font-weight: bold;
     line-height: 1.55;
     color: #f9f9f9;
-    opacity: 0.48;
+    opacity: 0.43;
     font-size: 13px;
 }
 
@@ -42,9 +42,10 @@
 
 .font-large {
     color: #f9f9f9;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 1;
     font-family: "Work Sans",sans-serif;
+    font-weight: bold;
 }
 
 .socials {
@@ -126,11 +127,18 @@
     flex-wrap: wrap;
 }
 
-.links {
+.link-container {
     display: flex;
     flex-direction: column;
-    height: 250px;
-    width: 300px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 400px;
+    width: 600px;
+    padding-bottom: 100px;
+}
+
+.links {
+    height: 200px;
 }
 
 .footer-container {
@@ -179,12 +187,20 @@ input[type=checkbox] {
     margin-right: 4px;
 }
 
+.wholesale {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 160px;
+}
+
 .underline {
     border-bottom: 1px dotted currentColor;
 }
 
 .link {
     width: 50%;
+    text-decoration: underline dotted;
 }
 
 .link:hover {

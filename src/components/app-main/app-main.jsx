@@ -6,6 +6,7 @@ import Header from '../header/header';
 import TilesContainer from '../tiles-container/tiles-container';
 import GreyOut from '../grey-out/grey-out';
 import Footer from '../footer/footer';
+import Login from '../login/login';
 
 
 
@@ -42,6 +43,7 @@ const AppMain = () => {
             <GreyOut toggleDropDown={toggleDropDown} />
             <Header category={category} />
             <TilesContainer />
+            <Login />
             <Footer />
         </div>
     )

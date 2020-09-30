@@ -12,7 +12,7 @@ const Footer = () => {
             <div className='column border-right'>
                 <div className='footer-container'>
                     <div className=''>
-                        <span className='font-dark'><p>NEWSLETTER SIGN UP</p></span>
+                        <span><p className='font-dark'>NEWSLETTER SIGN UP</p></span>
                         <span className='wide'><input type='email' placeholder='Enter your email' required className='input' ></input><button className='sign-up font-light'>SIGN UP</button></span>
                         <span className='span'><input type="checkbox"></input><p>Receive news about Poketo Los Angeles?</p></span>
                     </div>
@@ -33,15 +33,15 @@ const Footer = () => {
             </div>
             <div className='column padding-left'>
                 <div className='footer-container'>
-                    <div>
-                        <span className='font-dark'><p>WHOLESALE</p></span>
-                        <span className='wholesale'><a className='button underline font-large'>Visit our wholesale site</a></span>
+                    <div className='wholesale'>
+                        <span><p className='font-dark'>WHOLESALE</p></span>
+                        <span><a className='underline font-large'>Visit our wholesale site</a></span>
                         <span className='font-lighter'><p>Are you a retailer interested in carrying Poketo products? We have a site just for you.</p></span>
                     </div>
-                    <div className='links'>
+                    <div className='link-container'>
                         <span className='font-dark'><p>FOOTER MENU</p></span>
-                        <div className='row'>
-                            {menuLinks.map(link => <a className='link font-lighter' href='#' >{link}</a>)}
+                        <div className='row links'>
+                            {menuLinks.map(link => <a className='link font-light' href='#' >{link}</a>)}
                         </div>
                     </div>
                 </div>

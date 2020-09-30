@@ -1,0 +1,21 @@
+.login {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.login-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.customer-login {
+    font-family: Montserrat,sans-serif;
+    font-weight: bolder;
+    line-height: 0.5;
+    font-size: 4vw;
+    color: #565656;
+}
