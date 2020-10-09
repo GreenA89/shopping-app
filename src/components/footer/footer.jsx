@@ -27,7 +27,7 @@ const Footer = () => {
                         <p className='font-lighter'>Don't forget to follow us!</p>
                     </div>
                     <div className='copyright'>
-                        <p>Copyright © 2020 <span className='underline'>Poketo</span></p>
+                        <p>Copyright © 2020 <span className='underline link-large'>Poketo</span></p>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@ const Footer = () => {
                 <div className='footer-container'>
                     <div className='wholesale'>
                         <span><p className='font-dark'>WHOLESALE</p></span>
-                        <span><a className='underline font-large'>Visit our wholesale site</a></span>
+                        <span><a className='underline font-large link-large'>Visit our wholesale site</a></span>
                         <span className='font-lighter'><p>Are you a retailer interested in carrying Poketo products? We have a site just for you.</p></span>
                     </div>
                     <div className='link-container'>

@@ -19,3 +19,110 @@
     font-size: 4vw;
     color: #565656;
 }
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 230px;
+    width: 500px;
+}
+
+.sign-in-container {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    justify-content: flex-start;
+    height: 50px;
+}
+
+.sign-up-forgot-container {
+    display: flex;
+    flex-direction: column;
+    height: 53px;
+    width: 370px;
+    padding-left: 30px;
+    flex-direction: column;
+    font-size: 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.email {
+    width: 492px;
+    height: 50px;
+    background: #e7e7e7;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.email:focus {
+    background: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.email::placeholder {
+    font-size: 14px;
+    color: #565656;
+    opacity: 0.7;
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.password {
+    width: 492px;
+    height: 50px;
+    background: #e7e7e7;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.password::placeholder {
+    font-size: 14px;
+    color: #565656;
+    opacity: 0.7;
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.password:focus {
+    background: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.forgot-password {
+    width: 250px;
+    line-height: 20px;
+    margin-top: 5px;
+}
+
+.sign-in {
+    height: 55px;
+    width: 100px;
+    border: none;
+    background: #565656;
+    transition: all 0.2s ease-in-out;
+}
+
+.sign-in:hover {
+    cursor: pointer;
+    background: #1990c6;
+    transition: all 0.2s ease-in-out;
+}
+
+.sign-up {
+    padding-top: 2px;
+    background: none;
+}
+
+.new-customer {
+    opacity: 0.62;
+    line-height: 20px;
+    width: 110px;
+    margin-top: 0;
+}
+
+.new-customer-container{
+    display: flex; 
+    flex-direction: row;
+}

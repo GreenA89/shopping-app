@@ -104,7 +104,7 @@
     transition: border-color 0.2s ease-in;
     color: rgba(244,244,244, 0.7);
     outline: none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .input::placeholder {
@@ -210,5 +210,19 @@ input[type=checkbox] {
 }
 
 .link:focus {
+    color: #1990c6;
+}
+
+.link-large {
+    width: 50%;
+}
+
+.link-large:hover {
+    cursor: pointer;
+    color: #1990c6;
+    transition: color 0.2s ease-in;
+}
+
+.link-large:focus {
     color: #1990c6;
 }

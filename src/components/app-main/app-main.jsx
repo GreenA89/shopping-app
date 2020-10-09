@@ -15,6 +15,7 @@ const AppMain = () => {
     const [toggleDropDown, setToggleDropDown] = useState(false);
     const [toggleSection, setToggleSection] = useState(0);
     const [category, setCategory] = useState(1);
+    const [section, setSection] = useState('');
     
     const handleToggleTrue = (x) => {
         setToggleDropDown(true);
@@ -27,8 +28,15 @@ const AppMain = () => {
 
     const handleSetCategory = (index) => {
         setCategory(index);
+        setSection('store')
         setToggleDropDown(false);
     }
+
+    const handleSetSection = (section) => {
+        setSection(section);
+    }
+
+    console.log(section);
 
     return (
         <div className='app-main' >
@@ -38,12 +46,13 @@ const AppMain = () => {
                 toggleDropDown={toggleDropDown}
                 toggleSection={toggleSection}
                 setCategory={handleSetCategory}
+                setSection={handleSetSection}
             /> 
-            <Sort />
+            {section !== 'login' && <Sort />}
             <GreyOut toggleDropDown={toggleDropDown} />
-            <Header category={category} />
+            {section !== 'login' && <Header category={category} />}
             <TilesContainer />
-            <Login />
+            {section === 'login' && <Login />}
             <Footer />
         </div>
     )
