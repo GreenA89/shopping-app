@@ -7,6 +7,7 @@ import TilesContainer from '../tiles-container/tiles-container';
 import GreyOut from '../grey-out/grey-out';
 import Footer from '../footer/footer';
 import Login from '../login/login';
+import Custom from '../custom-page/custom';
 
 
 
@@ -15,7 +16,7 @@ const AppMain = () => {
     const [toggleDropDown, setToggleDropDown] = useState(false);
     const [toggleSection, setToggleSection] = useState(0);
     const [category, setCategory] = useState(1);
-    const [section, setSection] = useState('');
+    const [section, setSection] = useState('store');
     
     const handleToggleTrue = (x) => {
         setToggleDropDown(true);
@@ -48,10 +49,11 @@ const AppMain = () => {
                 setCategory={handleSetCategory}
                 setSection={handleSetSection}
             /> 
-            {section !== 'login' && <Sort />}
+            {section === 'store' && <Sort />}
             <GreyOut toggleDropDown={toggleDropDown} />
-            {section !== 'login' && <Header category={category} />}
+            {section === 'store' && <Header category={category} />}
             <TilesContainer />
+            {section === 'custom' && <Custom />}
             {section === 'login' && <Login />}
             <Footer />
         </div>
