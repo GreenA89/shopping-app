@@ -52,7 +52,7 @@ const AppMain = () => {
             {section === 'store' && <Sort />}
             <GreyOut toggleDropDown={toggleDropDown} />
             {section === 'store' && <Header category={category} />}
-            <TilesContainer />
+            {section === 'store' && <TilesContainer />}
             {section === 'custom' && <Custom />}
             {section === 'login' && <Login />}
             <Footer />

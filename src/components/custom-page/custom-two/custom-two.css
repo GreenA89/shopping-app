@@ -1,4 +1,12 @@
 .custom-two {
-    height: 100vh;
-    border: 1px solid;
+    height: 130vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.gif {
+    height: 120vh;
+    width: 65%;
 }

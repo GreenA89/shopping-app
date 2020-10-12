@@ -80,7 +80,7 @@
     margin-top: 23px;
 }
 
-.sign-up {
+.sign-up-button {
     height: 35px;
     background: rgb(132, 136, 143);
     width: 70px;
@@ -88,7 +88,7 @@
     border: none;
 }
 
-.sign-up:hover {
+.sign-up-button:hover {
     cursor: pointer;
 }
 
@@ -200,7 +200,6 @@ input[type=checkbox] {
 
 .link {
     width: 50%;
-    text-decoration: underline dotted;
 }
 
 .link:hover {
