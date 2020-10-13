@@ -1,0 +1,37 @@
+.shop-in-store {
+    display: flex;
+    flex-direction:  column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 170vh;
+    padding-top: 200px;
+}
+
+.shop-in-store-container {
+    display: flex;
+    font-family: Montserrat,sans-serif;
+    font-size: 0.75vw;
+    color: #565656;
+    flex-direction:  column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 70%;
+    height: 90%;
+}
+
+.shop-appointment {
+    font-family: Montserrat,sans-serif;
+    font-weight: bolder;
+    line-height: 0.5;
+    font-size: 3vw;
+    color: #565656;
+}
+
+.image {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.list-item {
+    margin-bottom: 7px;
+}

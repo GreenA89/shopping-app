@@ -8,6 +8,7 @@ import GreyOut from '../grey-out/grey-out';
 import Footer from '../footer/footer';
 import Login from '../login/login';
 import Custom from '../custom-page/custom';
+import ShopInStore from '../shop-in-store/shop-in-store';
 
 
 
@@ -53,6 +54,7 @@ const AppMain = () => {
             <GreyOut toggleDropDown={toggleDropDown} />
             {section === 'store' && <Header category={category} />}
             {section === 'store' && <TilesContainer />}
+            {section === 'shop-in-store' && <ShopInStore />}
             {section === 'custom' && <Custom />}
             {section === 'login' && <Login />}
             <Footer />
