@@ -1,6 +1,33 @@
 .cart {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    height: 40px;
+    width: 170px;
+}
+
+.nav-svg {
+    height: 22px;
+    width: 22px;
+    fill: #707070;
+    outline: none;
+    border: none;
+    filter: none;
+    transition: filter 0.2s ease-in;
+}
+
+.nav-svg:hover {
+    cursor: pointer;
+    filter: invert(90%);
+    transition: filter 0.2s ease-in;
+}
+
+.cart-svg {
+    margin-bottom: 4px;
+}
+
+.favourite-svg {
+    margin-top: 5px;
+    width: 26px;
 }

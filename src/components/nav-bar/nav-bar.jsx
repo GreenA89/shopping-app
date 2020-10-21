@@ -4,6 +4,7 @@ import Cart from './cart/cart'
 import Logo from '../logo/logo';
 import DropDown from '../drop-down/drop-down';
 
+
 const NavBar = (props) => {
     return (
         <div className='container' onMouseLeave={props.handleToggleFalse}>
