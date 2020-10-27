@@ -4,13 +4,8 @@ import './tiles-container.css'
 
 const TilesContainer = (props) => {
 
-    const [focus, setFocus] = useState(false);
-    const [current, setCurrent] = useState(0);
-
-    const handleFocusTrue = (x, i) => {
-        setFocus(x);
-        setCurrent(i);
-    }
+    let focus = props.focus;
+    let current = props.current;
 
     let sortedProducts = products;
     switch(props.sortMethod) {
@@ -31,10 +26,10 @@ const TilesContainer = (props) => {
     return (
         <div className='tiles-container'>
             {sortedProducts.map((product, i) => 
-                <div className='tile-container' key={i} onMouseEnter={() => handleFocusTrue(true, i)} onMouseLeave={() => handleFocusTrue(false)}>
+                <div className='tile-container' key={i} onMouseEnter={() => props.handleFocus(true, i)} onMouseLeave={() => props.handleFocus(false)}>
                     <div className='tile-image'>
                         <img className={focus && current === i ? 'image-focus' : 'image'} src={focus && current === i? product.backupurl : product.url}></img>
-                        <button className={focus && current === i ? 'quick-shop' : 'quick-shop-hide'}>QUICK SHOP</button>
+                        <button className={focus && current === i ? 'quick-shop' : 'quick-shop-hide'} onClick={props.handleModal}>QUICK SHOP</button>
                     </div>
                     <div className='tile-text font'>
                         <p className='product-name'><b>{product.productname}</b></p>

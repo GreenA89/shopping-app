@@ -9,6 +9,7 @@ import Footer from '../footer/footer';
 import Login from '../login/login';
 import Custom from '../custom-page/custom';
 import ShopInStore from '../shop-in-store/shop-in-store';
+import Modal from '../modal/modal';
 
 
 
@@ -19,6 +20,14 @@ const AppMain = () => {
     const [category, setCategory] = useState(1);
     const [section, setSection] = useState('store');
     const [sortMethod, setSortMethod] = useState('');
+    const [modal, setModal] = useState(false);
+    const [focus, setFocus] = useState(false);
+    const [current, setCurrent] = useState(0);
+
+    const handleFocus = (x, i) => {
+        setFocus(x);
+        setCurrent(i);
+    }
     
     const handleToggleTrue = (x) => {
         setToggleDropDown(true);
@@ -43,6 +52,12 @@ const AppMain = () => {
         setSortMethod(e.target.value);
     }
 
+    const handleModal = () => {
+        setModal(!modal);
+        setCurrent(false)
+        setFocus(0)
+    }
+
     return (
         <div className='app-main' >
             <NavBar 
@@ -53,10 +68,11 @@ const AppMain = () => {
                 setCategory={handleSetCategory}
                 setSection={handleSetSection}
             /> 
+            {modal && <Modal handleModal={handleModal} />}
             {section === 'store' && <Sort handleSort={handleSort}/>}
             <GreyOut toggleDropDown={toggleDropDown} />
             {section === 'store' && <Header category={category} />}
-            {section === 'store' && <TilesContainer sortMethod={sortMethod}/>}
+            {section === 'store' && <TilesContainer sortMethod={sortMethod} handleModal={handleModal} focus={focus} current={current} handleFocus={handleFocus}/>}
             {section === 'shop-in-store' && <ShopInStore />}
             {section === 'custom' && <Custom />}
             {section === 'login' && <Login />}

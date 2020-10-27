@@ -5,7 +5,6 @@ import './drop-down.css';
 const DropDown = (props) => {
 
     let index = props.toggleSection;
-    console.log(index)
 
     return (
             <div 
