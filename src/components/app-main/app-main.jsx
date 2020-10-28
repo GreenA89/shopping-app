@@ -23,6 +23,7 @@ const AppMain = () => {
     const [modal, setModal] = useState(false);
     const [focus, setFocus] = useState(false);
     const [current, setCurrent] = useState(0);
+    const [modalData, setModalData] = useState({})
 
     const handleFocus = (x, i) => {
         setFocus(x);
@@ -52,11 +53,14 @@ const AppMain = () => {
         setSortMethod(e.target.value);
     }
 
-    const handleModal = () => {
+    const handleModal = (product) => {
         setModal(!modal);
         setCurrent(false)
         setFocus(0)
+        setModalData(product);
     }
+
+    
 
     return (
         <div className='app-main' >
@@ -68,7 +72,7 @@ const AppMain = () => {
                 setCategory={handleSetCategory}
                 setSection={handleSetSection}
             /> 
-            {modal && <Modal handleModal={handleModal} />}
+            {modal && <Modal handleModal={handleModal} data={modalData} />}
             {section === 'store' && <Sort handleSort={handleSort}/>}
             <GreyOut toggleDropDown={toggleDropDown} />
             {section === 'store' && <Header category={category} />}
