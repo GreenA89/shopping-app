@@ -3,10 +3,15 @@ import './modal.css';
 
 const Modal = (props) => {
 
-    const [image, setImage] = useState(0)
+    const [image, setImage] = useState(0);
+    const [quantity, setQuantity] = useState(1)
 
     const handleImage = (value) => {
         setImage(value)
+    }
+
+    const handleQuantity = (event) => {
+        setQuantity(Number(event.target.value));
     }
 
     return (
@@ -27,8 +32,8 @@ const Modal = (props) => {
                     </div>
                     <div className='modal-price'><b>${props.data.price + '.00'}</b></div>
                     <div className='modal-buttons'>
-                        <input className='quantity' type='number'></input>
-                        <button className='add-to-cart'>ADD TO CART</button>
+                        <input className='quantity' defaultValue={1} type='number' value={quantity} onChange={handleQuantity}></input>
+                        <button className='add-to-cart' onClick={() => props.handleCart({item: props.data, quantity: quantity})}>ADD TO CART</button>
                     </div>
                     <div className='modal-description'>{props.data.description}</div>
                 </div>

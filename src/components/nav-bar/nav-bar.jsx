@@ -21,7 +21,7 @@ const NavBar = (props) => {
                     <button className='margin-right font button' onMouseEnter={props.handleToggleFalse} onClick={() => props.setSection('shop-in-store')}>Shop In-Store</button>
                     <button className='margin-right font button' onMouseEnter={props.handleToggleFalse} onClick={() => props.setSection('custom')}>Custom</button>
                     <button className='margin-right font button' onMouseEnter={props.handleToggleFalse} onClick={() => props.setSection('login')}>Login</button>
-                    <Cart />
+                    <Cart setSection={props.setSection} />
                 </div>
             </div>
             <DropDown toggleDropDown={props.toggleDropDown} toggleSection={props.toggleSection}/>

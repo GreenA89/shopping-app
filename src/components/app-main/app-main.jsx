@@ -10,6 +10,7 @@ import Login from '../login/login';
 import Custom from '../custom-page/custom';
 import ShopInStore from '../shop-in-store/shop-in-store';
 import Modal from '../modal/modal';
+import ShoppingCart from '../shopping-cart/shopping-cart';
 
 
 
@@ -23,7 +24,8 @@ const AppMain = () => {
     const [modal, setModal] = useState(false);
     const [focus, setFocus] = useState(false);
     const [current, setCurrent] = useState(0);
-    const [modalData, setModalData] = useState({})
+    const [modalData, setModalData] = useState({});
+    const [cart, setCart] = useState([]);
 
     const handleFocus = (x, i) => {
         setFocus(x);
@@ -60,7 +62,16 @@ const AppMain = () => {
         setModalData(product);
     }
 
-    
+    const handleCart = (product) => {
+        setCart([...cart, product]);
+        setSection('cart');
+        setModal(!modal);
+    }
+
+    const handleRemoveItem = (index) => {
+        setCart(cart.filter((item, i) => i !== index));
+        console.log(index);
+    }
 
     return (
         <div className='app-main' >
@@ -72,7 +83,7 @@ const AppMain = () => {
                 setCategory={handleSetCategory}
                 setSection={handleSetSection}
             /> 
-            {modal && <Modal handleModal={handleModal} data={modalData} />}
+            {modal && <Modal handleModal={handleModal} data={modalData} handleCart={handleCart} />}
             {section === 'store' && <Sort handleSort={handleSort}/>}
             <GreyOut toggleDropDown={toggleDropDown} />
             {section === 'store' && <Header category={category} />}
@@ -80,6 +91,7 @@ const AppMain = () => {
             {section === 'shop-in-store' && <ShopInStore />}
             {section === 'custom' && <Custom />}
             {section === 'login' && <Login />}
+            {section === 'cart' && <ShoppingCart cart={cart} setSection={setSection} handleRemoveItem={handleRemoveItem}/>}
             <Footer />
         </div>
     )
