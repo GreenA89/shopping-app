@@ -5,6 +5,31 @@
     width: 100vw;
 }
 
+.column-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.cart-items {
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-top: 100px;
+}
+
+.cart-items-empty {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
 .shopping-column {
     display: flex;
     flex-direction: column;
@@ -14,9 +39,6 @@
     border-right: 1px solid #e7e7e7
 }
 
-.cart-items {
-    align-items: flex-start;
-}
 
 .empty-cart-container {
     margin-left: 150px;
@@ -50,23 +72,108 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: 1px solid;
     height: 140px;
-    width: 90%;
+    width: 73%;
+    margin-bottom: 50px;
 }
 
 .cart-item-name-image, .cart-item-quantity-close, .cart-item-image {
-    border: 1px solid;
     display: flex;
     flex-direction: row;
 }
 
 .cart-item-name {
-    border: 1px solid;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.cart-item-quantity-close {
+    justify-content: center;
+    align-items: center;
 }
 
 .cart-item-image {
     width: 130px;
+}
+
+.price {
+    margin-top: 5px;
+}
+
+.name {
+    margin-bottom: 0;
+    line-height: 25px;
+    color: #565656;
+    font-size: 0.75vw;
+}
+
+.remove {
+    height: 50px;
+    width: 50px;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1.5px dotted;
+    margin-left: 0;
+    color: #565656;
+    font-size: 0.85vw
+}
+
+.remove:hover {
+    cursor: pointer;
+    border-color: #1990c6;
+    transition: border-color 0.3s ease-in;
+}
+
+.margin {
+    margin-right: 0;
+}
+
+.special-instructions {
+    width: 94%;
+    height: 90px;
+    background: #e7e7e7;
+    border: none;
+    resize: none;
+    padding: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 50px;
+}
+
+.cart-form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-form-options {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #565656;
+}
+
+.total-price {
+    font-size: 15px;
+}
+
+.interest {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    font-size: 0.65vw;
+    font-weight: bold;
+    color: #565656;
+}
+
+.shipping {
+    font-size: 0.55vw;
+    opacity: 0.7;
 }

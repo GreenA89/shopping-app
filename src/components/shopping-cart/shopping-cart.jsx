@@ -1,7 +1,10 @@
 import React from 'react';
 import './shopping-cart.css';
+import CartItems from './cart-items/cart-items'
+import CartForm from './cart-form/cart-form';
 
 const ShoppingCart = (props) => {
+
     return (
         <div className='shopping-cart'>
             <div className='shopping-column'>
@@ -11,30 +14,9 @@ const ShoppingCart = (props) => {
                     <h1 className='customer-login'>_</h1>
                 </div>
             </div>
-            <div className='cart-items shopping-column'>
-                {props.cart.length === 0 &&
-                    <div className='empty-cart-container font'>
-                        <p>Your cart is currently emtpy</p>
-                        <button className='browsing-button' onClick={() => props.setSection('store')}>CONTINUE BROWSING</button>
-                    </div>
-                }
-                {props.cart.length > 0 &&
-                    props.cart.map((product, i) => 
-                        <div className='cart-item'>
-                            <div className='cart-item-name-image'>
-                                <img className='cart-item-image' src={product.item.url}></img>
-                                <div className='cart-item-name'>
-                                    <p>{product.item.productname}</p>
-                                    <p>${product.item.price}.00</p>
-                                </div>
-                            </div>
-                            <div className='cart-item-quantity-close'>
-                                <div>{product.quantity}</div>
-                                <button onClick={() => props.handleRemoveItem(i)}>X</button>
-                            </div>
-                        </div>
-                    )
-                }
+            <div className='column-right'>
+                <CartItems cart={props.cart} setSection={props.setSection} handleRemoveItem={props.handleRemoveItem}/>
+                <CartForm cart={props.cart} />
             </div>
         </div>
     )

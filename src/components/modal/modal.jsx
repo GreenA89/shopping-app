@@ -15,7 +15,7 @@ const Modal = (props) => {
     }
 
     return (
-        <div>
+        <div onMouseEnter={() => props.handleRecentItems(props.data)}>
             <div className='background' onClick={props.handleModal}></div>
             <div className='modal font'>
             <button className='close-button' onClick={props.handleModal}>x</button>

@@ -26,6 +26,9 @@ const AppMain = () => {
     const [current, setCurrent] = useState(0);
     const [modalData, setModalData] = useState({});
     const [cart, setCart] = useState([]);
+    const [recentItems, setRecentItems] = useState([]);
+
+    console.log(recentItems);
 
     const handleFocus = (x, i) => {
         setFocus(x);
@@ -73,6 +76,12 @@ const AppMain = () => {
         console.log(index);
     }
 
+    const handleRecentItems = (product) => {
+        let tempRecent = recentItems;
+        if (recentItems.length < 2) setRecentItems([product, ...tempRecent]);
+        if (recentItems.length >= 2) {tempRecent.pop(); tempRecent.unshift(product); setRecentItems(tempRecent)};
+    }
+
     return (
         <div className='app-main' >
             <NavBar 
@@ -83,7 +92,7 @@ const AppMain = () => {
                 setCategory={handleSetCategory}
                 setSection={handleSetSection}
             /> 
-            {modal && <Modal handleModal={handleModal} data={modalData} handleCart={handleCart} />}
+            {modal && <Modal handleModal={handleModal} data={modalData} handleCart={handleCart} handleRecentItems={handleRecentItems} />}
             {section === 'store' && <Sort handleSort={handleSort}/>}
             <GreyOut toggleDropDown={toggleDropDown} />
             {section === 'store' && <Header category={category} />}
