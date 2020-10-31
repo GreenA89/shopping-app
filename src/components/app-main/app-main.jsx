@@ -100,7 +100,7 @@ const AppMain = () => {
             {section === 'shop-in-store' && <ShopInStore />}
             {section === 'custom' && <Custom />}
             {section === 'login' && <Login />}
-            {section === 'cart' && <ShoppingCart cart={cart} setSection={setSection} handleRemoveItem={handleRemoveItem}/>}
+            {section === 'cart' && <ShoppingCart cart={cart} setSection={setSection} handleRemoveItem={handleRemoveItem} recentItems={recentItems} />}
             <Footer />
         </div>
     )

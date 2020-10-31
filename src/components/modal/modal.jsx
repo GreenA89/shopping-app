@@ -20,11 +20,11 @@ const Modal = (props) => {
             <div className='modal font'>
             <button className='close-button' onClick={props.handleModal}>x</button>
             <div className='image-swap'>
-                <div className={image == 0 ? 'circle-active' : 'circle'} onClick={() => handleImage(0)}></div>
-                <div className={image == 1 ? 'circle-active' : 'circle'} onClick={() => handleImage(1)}></div>
+                <div className={image === 0 ? 'circle-active' : 'circle'} onClick={() => handleImage(0)}></div>
+                <div className={image === 1 ? 'circle-active' : 'circle'} onClick={() => handleImage(1)}></div>
             </div>
                 <div className='modal-image-container'>
-                    <img className='modal-image' src={image === 0 ? props.data.url : props.data.backupurl}></img>
+                    <img className='modal-image' alt='item' src={image === 0 ? props.data.url : props.data.backupurl}></img>
                 </div>
                 <div className='modal-text'>
                     <div className='modal-header'>
