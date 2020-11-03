@@ -3,13 +3,12 @@
     position: absolute;
     width: 100%;
     z-index: 3;
-    border: 1px solid;
     background-color: none;
     transition: background-color 0.3s ease-in;
 }
 
 .show-grey {
-    /* display: block; */
+    display: block;
     background-color: rgba(0,0,0,0.7);
     transition: background-color 0.3s ease-in;
 }

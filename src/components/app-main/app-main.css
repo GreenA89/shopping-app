@@ -1,0 +1,19 @@
+.app-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.app-main {
+    position: absolute;
+    left: 0;
+    transition: left 0.3s ease-in;
+}
+
+.app-main-search {
+    position: absolute;
+    left: -25vw;
+    transition: left 0.3s ease-in;
+    overflow: hidden;
+    height: 100vh;
+}
+

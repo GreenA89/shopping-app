@@ -11,6 +11,8 @@ import Custom from '../custom-page/custom';
 import ShopInStore from '../shop-in-store/shop-in-store';
 import Modal from '../modal/modal';
 import ShoppingCart from '../shopping-cart/shopping-cart';
+import SearchBar from '../search-bar/search-bar';
+import BlackOut from '../black-out/black-out';
 
 
 
@@ -27,8 +29,7 @@ const AppMain = () => {
     const [modalData, setModalData] = useState({});
     const [cart, setCart] = useState([]);
     const [recentItems, setRecentItems] = useState([]);
-
-    console.log(recentItems);
+    const [search, setSearch] = useState(false);
 
     const handleFocus = (x, i) => {
         setFocus(x);
@@ -82,26 +83,35 @@ const AppMain = () => {
         if (recentItems.length >= 2) {tempRecent.pop(); tempRecent.unshift(product); setRecentItems(tempRecent)};
     }
 
+    const handleSearch = () => {
+        setSearch(!search);
+    }
+
     return (
-        <div className='app-main' >
-            <NavBar 
-                handleToggleTrue={handleToggleTrue} 
-                handleToggleFalse={handleToggleFalse} 
-                toggleDropDown={toggleDropDown}
-                toggleSection={toggleSection}
-                setCategory={handleSetCategory}
-                setSection={handleSetSection}
-            /> 
-            {modal && <Modal handleModal={handleModal} data={modalData} handleCart={handleCart} handleRecentItems={handleRecentItems} />}
-            {section === 'store' && <Sort handleSort={handleSort}/>}
-            <GreyOut toggleDropDown={toggleDropDown} />
-            {section === 'store' && <Header category={category} />}
-            {section === 'store' && <TilesContainer sortMethod={sortMethod} handleModal={handleModal} focus={focus} current={current} handleFocus={handleFocus}/>}
-            {section === 'shop-in-store' && <ShopInStore />}
-            {section === 'custom' && <Custom />}
-            {section === 'login' && <Login />}
-            {section === 'cart' && <ShoppingCart cart={cart} setSection={setSection} handleRemoveItem={handleRemoveItem} recentItems={recentItems} />}
-            <Footer />
+        <div className='app-container'>
+            <div className={search ? 'app-main-search' : 'app-main'}>
+                <NavBar 
+                    handleToggleTrue={handleToggleTrue} 
+                    handleToggleFalse={handleToggleFalse} 
+                    toggleDropDown={toggleDropDown}
+                    toggleSection={toggleSection}
+                    setCategory={handleSetCategory}
+                    setSection={handleSetSection}
+                    setSearch={handleSearch}
+                /> 
+                {modal && <Modal handleModal={handleModal} data={modalData} handleCart={handleCart} handleRecentItems={handleRecentItems} />}
+                {section === 'store' && <Sort handleSort={handleSort}/>}
+                <GreyOut toggleDropDown={toggleDropDown} />
+                {section === 'store' && <Header category={category} />}
+                {section === 'store' && <TilesContainer searchStatus={search} sortMethod={sortMethod} handleModal={handleModal} focus={focus} current={current} handleFocus={handleFocus}/>}
+                {section === 'shop-in-store' && <ShopInStore />}
+                {section === 'custom' && <Custom />}
+                {section === 'login' && <Login />}
+                {section === 'cart' && <ShoppingCart cart={cart} setSection={setSection} handleRemoveItem={handleRemoveItem} recentItems={recentItems} />}
+                <Footer />
+            </div>
+            <BlackOut searchStatus={search} setSearch={handleSearch} />
+            <SearchBar searchStatus={search} />
         </div>
     )
 }
