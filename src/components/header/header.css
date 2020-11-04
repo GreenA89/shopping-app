@@ -7,7 +7,16 @@
     font-size: 30px;
     justify-content: center;
     align-items: center;
-    height: 285px;
+    height: 15vw;
+    min-height: 9rem;
+    max-height: 25rem;
     width: 100vw;
     background-repeat: no-repeat;
 }
+
+@media screen and (max-width: 480px) {
+    .header {
+        font-size: 24px;
+    }
+}
+

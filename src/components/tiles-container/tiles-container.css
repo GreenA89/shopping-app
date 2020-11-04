@@ -14,6 +14,13 @@
     height: 470px;
 }
 
+@media screen and (max-width: 320px) {
+    .tile-container {
+        width: 49vw;
+        height: 350px;
+    }
+  }
+
 .tile-container:hover {
     cursor: pointer;
 }

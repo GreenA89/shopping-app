@@ -18,7 +18,7 @@ const Footer = () => {
                     </div>
                     <div className='socials'>
                         <p className='font-dark padding-bottom'>SOCIAL LINKS</p>
-                        <span className='padding-bottom row'>
+                        <span className='padding-bottom footer-row'>
                             <a className='social'><img src={Twitter} alt=''></img></a>
                             <a className='social'><img src={Facebook} alt=''></img></a>
                             <a className='social'><img src={Pinterest} alt=''></img></a>
@@ -40,7 +40,7 @@ const Footer = () => {
                     </div>
                     <div className='link-container'>
                         <span className='font-dark'><p>FOOTER MENU</p></span>
-                        <div className='row links'>
+                        <div className='footer-row links'>
                             {menuLinks.map(link => <a className='link font-light' href='#' >{link}</a>)}
                         </div>
                     </div>

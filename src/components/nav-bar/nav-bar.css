@@ -7,6 +7,13 @@
 .row {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 320px) {
+    .row {
+        flex-wrap: wrap;
+    }
 }
 
 .nav-bar {
@@ -18,6 +25,13 @@
     padding-right: 20px;
     padding-left: 50px;
     align-content: center;
+}
+
+@media screen and (max-width: 320px) {
+    .nav-bar {
+        width: 320px;
+        height: 50px;
+    }
 }
 
 .margin-right {

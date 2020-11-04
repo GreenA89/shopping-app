@@ -5,14 +5,15 @@
 
 .app-main {
     position: absolute;
-    left: 0;
-    transition: left 0.3s ease-in;
+    right: 0;
+    transition: right 0.3s ease-in;
+    width: 100vw;
 }
 
 .app-main-search {
     position: absolute;
-    left: -25vw;
-    transition: left 0.3s ease-in;
+    right: 25vw;
+    transition: right 0.3s ease-in;
     overflow: hidden;
     height: 100vh;
 }

@@ -121,7 +121,7 @@
     border: 1px solid;
 }
 
-.row {
+.footer-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

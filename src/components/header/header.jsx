@@ -7,7 +7,7 @@ const Header = (props) => {
     let index = props.category;
 
     return (
-        <div className='header' data-product-resize='fill' style={{backgroundImage: headerImages[index].image, backgroundSize: '100%',}}>
+        <div className='header'  style={{backgroundImage: headerImages[index].image, backgroundSize: 'cover',}}>
             <h1>{headerImages[index].text}</h1>
         </div>
     )
