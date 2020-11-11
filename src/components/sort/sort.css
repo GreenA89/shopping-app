@@ -6,6 +6,16 @@
     align-items: center;
 }
 
+@media screen and (max-width: 600px) {
+    .sort {
+        height: 105px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
 .select-font {
     font: 400 Arial;
 }
@@ -33,4 +43,10 @@
 
 .margin-left {
     margin-left: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .margin-left {
+        margin-left: 0;
+    }
 }

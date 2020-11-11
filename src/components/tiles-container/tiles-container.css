@@ -11,13 +11,12 @@
     align-items: center;
     justify-content: space-between;
     width: 24.889vw;
-    height: 470px;
+    max-height: 485px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 905px) {
     .tile-container {
         width: 49vw;
-        height: 350px;
     }
   }
 
@@ -57,6 +56,7 @@
 .image {
     width: 77%;
     height: 100%;
+    object-fit: contain;
 }
 
 .image-focus {

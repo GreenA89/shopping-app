@@ -11,7 +11,7 @@ const Footer = () => {
         <div className='footer'>
             <div className='column border-right'>
                 <div className='footer-container'>
-                    <div className=''>
+                    <div className='sign-up-container'>
                         <span><p className='font-dark'>NEWSLETTER SIGN UP</p></span>
                         <span className='wide'><input type='email' placeholder='Enter your email' required className='input' ></input><button className='sign-up-button font-light'>SIGN UP</button></span>
                         <span className='span'><input type="checkbox"></input><p>Receive news about Poketo Los Angeles?</p></span>

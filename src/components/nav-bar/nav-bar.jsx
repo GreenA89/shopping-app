@@ -10,17 +10,17 @@ const NavBar = (props) => {
         <div className='container' onMouseLeave={props.handleToggleFalse}>
             <div className='row nav-bar' > 
                 <Logo className='font-size'/>
-                <div className='row margin-right'>
-                    <button className='margin-right font button' onMouseEnter={() => props.handleToggleTrue(0)} onClick={() => props.setCategory(0)}>New</button>
-                    <button autofocus='true' className='margin-right font button' onMouseEnter={() => props.handleToggleTrue(1)} onClick={() => props.setCategory(1)}>Stationary</button>
-                    <button className='margin-right font button' onMouseEnter={() => props.handleToggleTrue(2)} onClick={() => props.setCategory(2)}>Living</button>
-                    <button className='margin-right font button' onMouseEnter={() => props.handleToggleTrue(3)} onClick={() => props.setCategory(3)}>Accessories</button>
-                    <button className='margin-right font button' onMouseEnter={() => props.handleToggleTrue(4)} onClick={() => props.setCategory(4)}>Apparel</button>
-                    <button className='margin-right font button' onMouseEnter={props.handleToggleFalse}  onClick={() => props.setCategory(5)}>Kids</button>
-                    <button className='margin-right font button' onMouseEnter={() => props.handleToggleTrue(5)} onClick={() => props.setCategory(6)}>Sale</button>
-                    <button className='margin-right font button' onMouseEnter={props.handleToggleFalse} onClick={() => props.setSection('shop-in-store')}>Shop In-Store</button>
-                    <button className='margin-right font button' onMouseEnter={props.handleToggleFalse} onClick={() => props.setSection('custom')}>Custom</button>
-                    <button className='margin-right font button' onMouseEnter={props.handleToggleFalse} onClick={() => props.setSection('login')}>Login</button>
+                <div className='row row-links'>
+                    <button className='font button showOnDesktop' onMouseEnter={() => props.handleToggleTrue(0)} onClick={() => props.setCategory(0)}>New</button>
+                    <button autofocus='true' className='font button showOnDesktop' onMouseEnter={() => props.handleToggleTrue(1)} onClick={() => props.setCategory(1)}>Stationary</button>
+                    <button className='font button showOnDesktop' onMouseEnter={() => props.handleToggleTrue(2)} onClick={() => props.setCategory(2)}>Living</button>
+                    <button className='font button showOnDesktop' onMouseEnter={() => props.handleToggleTrue(3)} onClick={() => props.setCategory(3)}>Accessories</button>
+                    <button className='font button showOnDesktop' onMouseEnter={() => props.handleToggleTrue(4)} onClick={() => props.setCategory(4)}>Apparel</button>
+                    <button className='font button showOnDesktop' onMouseEnter={props.handleToggleFalse}  onClick={() => props.setCategory(5)}>Kids</button>
+                    <button className='font button showOnDesktop' onMouseEnter={() => props.handleToggleTrue(5)} onClick={() => props.setCategory(6)}>Sale</button>
+                    <button className='font button showOnDesktop' onMouseEnter={props.handleToggleFalse} onClick={() => props.setSection('shop-in-store')}>Shop In-Store</button>
+                    <button className='font button showOnDesktop' onMouseEnter={props.handleToggleFalse} onClick={() => props.setSection('custom')}>Custom</button>
+                    <button className='font button showOnDesktop' onMouseEnter={props.handleToggleFalse} onClick={() => props.setSection('login')}>Login</button>
                     <Cart setSection={props.setSection} setSearch={props.setSearch} />
                 </div>
             </div>

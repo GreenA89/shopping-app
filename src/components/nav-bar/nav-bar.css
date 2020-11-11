@@ -8,11 +8,28 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: space-evenly;
 }
 
 @media screen and (max-width: 320px) {
     .row {
         flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .row {
+        justify-content: flex-end;
+    }
+}
+
+.row-links {
+    width: 1050px;
+}
+
+@media screen and (max-width: 1025px) {
+    .showOnDesktop {
+        display: none;
     }
 }
 
@@ -27,10 +44,14 @@
     align-content: center;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .nav-bar {
-        width: 320px;
         height: 50px;
+    }
+}
+@media screen and (max-width: 1025px) {
+    .nav-bar {
+        padding-left: 30px;
     }
 }
 
@@ -43,6 +64,12 @@
     font-size: 13px;
     color: #707070;
     font-weight: 500;
+}
+
+@media screen and (max-width: 1275px) {
+    .font {
+        font-size: 11px;
+    }
 }
 
 .button {
